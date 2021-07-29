@@ -1,0 +1,20 @@
+          
+server:
+  port: 8765
+ 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka 
+      
+spring:
+  application:
+    name: tk-gateway
+    
+ 
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
