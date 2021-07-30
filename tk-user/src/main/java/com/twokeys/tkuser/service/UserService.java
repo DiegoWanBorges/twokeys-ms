@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.twokeys.tkuser.dto.UserDTO;
 import com.twokeys.tkuser.entities.User;
 import com.twokeys.tkuser.repositories.UserRepository;
 
@@ -14,8 +13,8 @@ public class UserService {
 	private UserRepository repository;
 
 	@Transactional(readOnly = true)
-	public UserDTO findByEmail(String email) {
+	public User findByEmail(String email) {
 		User entity = repository.findByEmail(email);
-		return new UserDTO(entity);
+		return entity;
 	}
 }
