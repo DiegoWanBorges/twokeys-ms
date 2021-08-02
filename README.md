@@ -11,7 +11,7 @@ O serviço tk-sales possui o cadastro de cliente que é instanciado pelo serviç
 
 O balanceamento de carga e descoberta de serviços é feito pelo Eureka Server e a centralização das requisições é feita pelo Spring Cloud Gateway utilizando roteamento dinâmico.
 
-As configurações foram centralizadas em um servidor de configuração.
+As configurações foram centralizadas utilizando Spring Cloud Config Server.
 
 # Tecnologias Utilizadas:
 - Java
